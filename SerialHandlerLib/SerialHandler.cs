@@ -22,8 +22,6 @@ namespace SerialHandlerLib
             try
             {
                 serial.Open();
-                serial.ReadTimeout = 100;
-                serial.WriteTimeout = 100;
                 SendLog("Serialhandler was initialized.");
             }
             catch (Exception e)

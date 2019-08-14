@@ -5,5 +5,5 @@ void setup() {
 void loop() {
   int value = analogRead(0);
   Serial.println(value);
-  delay(100);
+  delay(300);
 }

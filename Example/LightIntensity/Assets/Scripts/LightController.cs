@@ -14,13 +14,13 @@ public class LightController : MonoBehaviour
         serialHandler = new SerialHandler();
         serialHandler.OnDataReceived += OnDataReceived;
         serialHandler.SendLog += WriteLog;
-        serialHandler.Init("/dev/cu.SLAB_USBtoUART", 115200);
+        serialHandler.Init("Write serial port name", 115200);
         serialHandler.StartRead();
     }
 
     void Update()
     {
-        lightComponent.intensity = Map(intensity, 0, 1024, 0, 2);
+        lightComponent.intensity = Map(intensity, 250, 500, 2, 0);
     }
 
     void OnApplicationQuit()
